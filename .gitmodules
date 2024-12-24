@@ -1,0 +1,6 @@
+[submodule "client"]
+	path = client
+	url = https://github.com/alfathrajif/quiz-app-nextjs-frontend.git
+[submodule "server"]
+	path = server
+	url = https://github.com/alfathrajif/quiz-app-nestjs-backend.git
