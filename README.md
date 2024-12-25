@@ -20,3 +20,122 @@ This full-stack Quiz application is developed using **Next.js** for the [client-
 ## 📷 Screenshots
 
 ![Landing Page](https://raw.githubusercontent.com/alfathrajif/quiz-app/refs/heads/main/docs/Kalkulus-Platform-tryout-dan-penjelasan-soal--12-25-2024_07_56_AM.png "Landing Page")
+
+---
+
+## Running on Local
+
+### Prerequisites
+
+- Node.js (v14.x or later)
+- npm or yarn
+- MySQL database
+- Environment setup for both Next.js and NestJS projects
+
+### Clone the Repository
+
+You have to clone the client-side and server-side one by one.
+
+```bash
+git clone https://github.com/alfathrajif/quiz-app-nextjs-frontend.git
+```
+
+```bash
+git clone https://github.com/alfathrajif/quiz-app-nestjs-backend.git
+```
+
+### Set Up Environment Variables
+
+#### Install Frontend Dependencies (Next.js)
+
+1. Navigate to the `client` folder (assumed structure for Next.js project).
+2. Create a `.env.development.local` file with the following variables:
+
+```bash
+NODE_ENV=development
+NEXT_PUBLIC_API_URL=http://localhost:3001
+COOKIE_NAME=hroa0FzN4k_dev
+```
+
+#### Backend Setup (NestJS)
+
+1. Go to the `server` folder (assumed structure for NestJS project).
+2. Create a `.env.development.local` file with the following variables:
+
+```bash
+NODE_ENV=development.local
+PORT=3001
+DATABASE_URL="mysql://root:@localhost:3306/quiz_app_dev"
+CLIENT_URL="http://localhost:3000"
+JWT_EXPIRATION=10h
+JWT_SECRET=52AB3DCB99B48798759A39CC8A221
+COOKIE_NAME=hroa0FzN4k_dev
+```
+
+### Install Dependencies
+
+#### Frontend
+
+```bash
+cd client # Make sure it's in the client folder
+
+npm install
+# or
+yarn install
+```
+
+#### Backend
+
+```bash
+cd server # Make sure it's in the server folder
+
+npm install
+# or
+yarn install
+```
+
+### Set Up Database (Prisma)
+
+Run Prisma migrations to create the database tables.
+
+```bash
+npm run prisma:migrate:dev
+```
+
+Optionally, seed the database if there’s a seed file
+
+```bash
+npm run prisma:seed:dev
+```
+
+### Run the Application
+
+#### Backend (NestJS)
+
+In the `server` folder, start the backend server in development mode:
+
+```bash
+npm run start:dev
+# or
+yarn start:dev
+```
+
+#### Frontend (Next.js)
+
+In the `client` folder, start the frontend app:
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+### Access the Application
+
+- **Frontend**: Visit `http://localhost:3000`:
+- **Backend**: Visit `http://localhost:3001`:
+
+## Additional Notes
+
+- Ensure the database is running and accessible via the credentials in `.env.development.local`
+- Both frontend and backend servers should be running concurrently for the application to work as expected.
