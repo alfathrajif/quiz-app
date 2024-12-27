@@ -4,10 +4,12 @@ This full-stack Quiz application is developed using **Next.js** for the [client-
 
 ## Features
 
-- **Authentication**: Leverages JWT and Passport to implement secure login and registration, ensuring data protection and user identity verification.
-- **Responsive Design**: Designed to deliver a seamless user experience across various devices, adapting to different screen sizes for optimal usability.
-- **Manual Payment**: Enables users to complete payments manually, with clear instructions and verification processes for smooth transactions.
-- **Admin Dashboard**: Offers a comprehensive dashboard for administrators to manage quizzes, monitor user activities, and oversee subscriptions efficiently.
+- **Authentication**: Secure login and registration using JWT and Passport.
+- **Responsive Design**: Optimized for all devices with seamless usability.
+- **Manual Payment**: Simple manual payment process with verification.
+- **Admin Dashboard**: Manage quizzes, users, and subscriptions efficiently.
+- **Subscription**: Access premium features with tiered plans and secure payments.
+- **Quiz**: Interactive multiple-choice quizzes with results, time tracking, and randomized questions.
 
 ## Technologies
 
